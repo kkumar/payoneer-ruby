@@ -29,6 +29,8 @@ module Payoneer
     configuration.validate!
 
     request_params = default_params.merge(mname: method_name).merge(params)
+		
+		puts request_params
 
     response = RestClient.post(configuration.api_url, request_params)
 
